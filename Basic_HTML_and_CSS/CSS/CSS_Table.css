@@ -1,0 +1,13 @@
+table {
+	border: 1px solid #7FFFD4; /*Aquamarine*/
+}
+
+tr, th {
+	background-color: #F0F8FF; /*AliceBlue*/
+	color: #A52A2A /*Brown*/
+}
+
+td:hover {
+	background-color: #A9A9A9; /*DarkGray*/
+}
+
