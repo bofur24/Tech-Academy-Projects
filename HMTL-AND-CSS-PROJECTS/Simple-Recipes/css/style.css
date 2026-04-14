@@ -486,3 +486,17 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: rgb(247, 177, 188);
 }
+
+/* ABOUT FORM CSS
+
+/*Sets up the content within the div tag containing the ID
+contact to be centered on the webpage*/
+
+#about {
+    display: block;
+    margin-bottom: 70px;
+}
+
+#about p {
+    line-height: 1.8;
+}
