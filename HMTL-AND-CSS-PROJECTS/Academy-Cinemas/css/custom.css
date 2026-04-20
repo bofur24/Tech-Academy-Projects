@@ -1,6 +1,9 @@
 /*Font Passion One from fonts.google.com*/
 @import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
 
+/*Font Yesteryear from fonts.google.com*/
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Yesteryear&display=swap');
+
 /* Creates global CSS variables that can be reused 
 throughout the file*/
 
@@ -11,12 +14,19 @@ throughout the file*/
     --secondary-color: rgba(128, 0, 0, 0.9);
     --accent-color: rgb(36, 36, 36);
     --accent-text-color: rgb(255, 255, 255);
-    --main-font-family: 'Passion One', cursive;   
+    --main-font-family: 'Passion One', cursive;
+    --secondary-font-family: 'Yesteryear', cursive;   
+}
+
+html {
+    scroll-padding-top: 100px;
 }
 
 body {
     background-image: url(../images/theater-curtains.jpg);
-    background-size: 100%;
+    background-size: 100% 120%; /*100% horizontally and 120% vertically*/
+    background-attachment: fixed;
+    overflow-x: hidden; /*Removes left to right scroll bar*/
 }
 
 /*NAVBAR*/
@@ -119,6 +129,12 @@ drop down menu*/
 
 /*GENERAL STYLING*/
 
+h1, h3, h4, p {
+    cursor: default; /*Changes the cursor back to the
+    default arrow instead of a text cursor when hovering
+    your mouse over text*/
+}
+
 h1 {
     font-family: var(--main-font-family);
     color: var(--main-color-accent);
@@ -127,8 +143,71 @@ h1 {
     font-size: 100px;
 }
 
+h3 {
+    font-family: var(--main-font-family);
+    font-size: 50px;
+}
+
+h4 {
+    font-family: var(--secondary-font-family);
+    font-size: 25px;
+}
+
+b{
+    font-weight: 600;
+}
+
+img {
+    border-radius: 5px;
+}
+
 /*MOVIE CARDS*/
 
 .container {
     padding: 100px;
 }
+
+.card {
+    border: 5px solid var(--main-color);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.card-body {
+    padding-top: 30px;
+    padding-left: 20px; 
+}
+
+.spacer {
+    padding-top: 50px;
+}
+
+/*BUTTONS*/
+
+/*Creates the main styling for buttons that contain the
+Bootstrap .btn class*/
+
+.btn {
+    background-color: var(--main-color);
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    color: var(--accent-color);
+    font-family: var(--main-font-family);
+    font-size: 18px;
+}
+
+.btn:focus {
+    border-color: transparent; /*Overrides Bootstraps dark
+    border when the user clicks on the button*/
+    background-color: var(--main-color);
+    color: var(--accent-text-color);
+}
+
+.btn:hover {
+    border-color: transparent;
+    background-color: var(--main-color);
+    color: var(--accent-text-color);
+}
+
