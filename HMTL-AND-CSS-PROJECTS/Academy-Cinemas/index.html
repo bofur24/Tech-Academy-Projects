@@ -59,7 +59,7 @@
     </header>
     <!--NOW PLAYING-->
     <section>
-        <div class="container">
+        <div class="container" id="now-playing">
             <h1>Now Playing</h1>
             <!--BEN HUR-->
             <div class="d-flex flex-row flex-wrap spacer" id="ben-hur">
@@ -182,7 +182,7 @@
             <div class="d-flex flex-row flex-wrap">
                 <!--MOVIE SELECTION-->
                 <div class="col">
-                    <div class="card">
+                    <div class="card text-center">
                         <h5 class="card-title">Please select a movie</h5>
                         <div class="card-body">
                             <select class="form-select" aria-label="Movie title selection">
@@ -196,7 +196,7 @@
                 </div>
                 <!--TIME SELECTION-->
                 <div class="col">
-                    <div class="card">
+                    <div class="card text-center">
                         <h5 class="card-title">Please select a show time</h5>
                         <div class="card-body">
                             <select class="form-select" aria-label="Show time selection">
@@ -213,7 +213,7 @@
                 </div>
                 <!--NUMBER OF TICKETS-->
                 <div class="col">
-                    <div class="card">
+                    <div class="card text-center">
                         <h5 class="card-title">Please select number of tickets</h5>
                         <div class="card-body">
                             <input type="number" id="quantity" value="1" step="1">
@@ -221,6 +221,55 @@
                     </div>
                 </div>
             </div>
+            <!--BUY TICKETS BUTTON-->
+            <div class="row justfiy-content-center">
+                <div class="col-auto">
+                    <button type="submit" class="btn yellow-btn">Buy Tickets</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--CONTACT FORM-->
+    <section>
+        <div class="container" id="contact">
+            <h1>Contact Us!</h1>
+            <div class="row gy-4">
+                <div class="col">
+                    <input type="text" placeholder="First Name" class="form-control">
+                </div>
+                <div class="col">
+                    <input type="text" placeholder="Last Name" class="form-control">
+                </div>
+                <div>
+                    <input type="email" placeholder="Email" class="form-control">
+                </div>
+                <div>
+                    <textarea rows="3" placeholder="Type Message Here..." class="form-control"></textarea>
+                    <button type="submit" class="btn yellow-btn" id="contact-submit">Submit</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--FOOTER-->
+    <section>
+        <div class="container-fluid">
+            <footer class="d-flex flex-wrap justify-content-center align-items-center py-3">
+                <p class="col-md-4 mb-0 footer-text">
+                    &copy; Academy Cinemas
+                </p>
+                <img src="images/logo.png" class="col-md-4 footer-img" alt="Academy Cinemas Logo">
+                <ul class="nav col-md-4 justify-content-end">
+                    <li class="nav-item">
+                        <a href="#now-playing" class="nav-link px-2 footer-text">Now Playing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#tickets" class="nav-link px-2 footer-text">Tickets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link px-2 footer-text">Contact</a>
+                    </li>
+                </ul>
+            </footer>
         </div>
     </section>
 </body>
