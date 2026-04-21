@@ -1,0 +1,195 @@
+
+body {
+    background-color: rgb(189, 188, 188);
+}
+
+section, div, h1, nav {
+    margin-left: -15px;
+    margin-right: -15px; 
+}
+
+
+section {
+    background-color: rgb(68, 129, 109);
+}
+
+div {
+    padding: 10px 0px;
+}
+
+h1 {
+    text-align: center;
+    border-bottom: 5px solid black;
+    font-size: 40px;
+    background-color: #22e071;
+    color: rgb(31, 8, 243);
+}
+
+/*First Challenge Image*/
+img {
+    filter: grayscale(60%)
+}
+
+/*Image Size 600 838*/
+.img-center {
+    display: block;
+    height: 838px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+}
+
+.img-position {
+    margin-top: 170px;
+}
+
+/*Second Challenge Footer*/
+
+footer {
+    background-color: bisque;
+    margin-bottom: -15px;
+}
+
+footer p{
+    text-align: center;
+    font-weight: 800;
+
+}
+
+/*Third Challenge Table*/
+
+table {
+    margin: 30px;
+    background-color: beige;   
+}
+
+table, table td, table tr {
+    border: 2px solid black;
+    padding: 10px;
+}
+
+table tr:nth-child(2) {
+    background-color: aliceblue;
+}
+
+/*Fourth Challenge*/
+
+.img-position {
+    position: relative;    
+}
+
+.img-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 35px;
+    color: blue;
+}
+
+/*Fifth Challenge*/
+
+nav {
+    position: fixed;
+    top: 0;
+    background-color: black;
+    color: white;
+    width: 120%;
+    z-index: 8;
+}
+
+nav li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+    font-size: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: aquamarine;
+}
+
+/*Sixth Challenge Two-Columns*/
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+    background-color: blueviolet;
+    height: 500px;
+    padding-top: 25px;
+    font-size: 35px;
+    color: antiquewhite;
+    border: 2px dotted #fff;
+    text-align: center;
+}
+
+/*Seventh Challenge*/
+
+.p-hover {
+    font-size: 35px;
+    color: antiquewhite;
+    text-align: center;
+    padding: 35px;
+}
+
+.p-hover:hover {
+    background-color: aquamarine;
+    color: blue;
+}
+
+/*Eighth Challenge*/
+
+.img-container {
+    position: relative; 
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-eighth {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;
+}
+
+.img-container:hover .overlay{
+    opacity: .8;
+}
+
+.text {
+    color:antiquewhite;
+    font-size: 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+
+
+
+
