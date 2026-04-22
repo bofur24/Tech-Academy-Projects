@@ -1,0 +1,204 @@
+/*Imports*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); /*Imported font from fonts.google.com*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap'); /*Imported font from fonts.google.com*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap'); /*Imported font from fonts.google.com*/
+
+/*GENERAL STYLING*/
+
+/*body*/
+body {
+    margin: 0%; /*Displays all the way to the edge of the browser screen*/
+    cursor: default;
+}
+
+/*headers*/
+h1 {
+    text-transform: capitalize;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    margin-top: 3%;
+    color: #1a1a1a;
+}
+
+h1:hover {
+    filter: grayscale(5%);
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+/*Title Text*/
+
+.whiteText {
+    color: #fff;
+}
+
+/*Paragraph*/
+
+p {
+    font-family: "Playfair Display", serif;
+    text-align: justify;
+    letter-spacing: 1px;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+p:hover {
+    transition: transform 1s;
+    transform: scale(1.01);
+}
+
+/*Alignement*/
+
+.center {
+    text-align: center;
+}
+
+.center:hover {
+    transition: transform 2s;
+    transform: scale(1.1);
+}
+
+/*Anchor elements*/
+
+a {
+    color: blue;
+}
+
+/*Quatation*/
+
+q {
+    font-style: italic;
+}
+
+/*Images*/
+
+img {
+    filter: grayscale(75%);
+    border-radius: 8px;
+    max-width: 100%;
+    height: 340px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img:hover {
+    filter: grayscale(5%);
+    transition: transform 1s;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 576px) {
+    img {
+        height: 100px;
+        margin-top: 150px;
+    };
+}
+
+footer {
+    padding: 2%;
+    background-color: #808080;
+}
+
+/*End of General Styling*/
+
+/*navBar Styling*/
+
+.navBar {
+    overflow: hidden;
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    -webkit-animation: moveNav 5s;
+    animation: moveNav 5s; 
+}
+
+/*moveNav animation effect for moving the nav bar in from the left of the screen*/
+@keyframes moveNav {
+    from {left: -100vw;}
+    to {left: 0vw;}
+}
+
+/* avBar links*/
+.navBar a {
+    float: left;
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    -webkit-animation: moveNavText 5.75s;
+    animation: moveNavText 5.75s;
+}
+
+/*moveNavText animation effect for moving the navbar text from above the view to the navbar*/
+@keyframes moveNavText {
+    from {top: -100vw;}
+    to {top: 0vw;}
+}
+
+
+@media screen and (max-width: 576px) {
+    .navBar a {
+        width: 25%;
+        font-size: 12px;
+    }
+}
+
+/*navBar hover effects*/
+.navBar a:hover {
+    background-color: #f4f4f4;
+    color: #000;
+    font-weight: bold;
+}
+
+/*navBar home button*/
+.navBar a.active {
+    background-color: #a9a9a9;
+}
+
+/*End of navBar Styling*/
+
+/*Video Styling*/
+
+/*Background Video Formatting*/
+#typeingVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    z-index: -1;
+}
+
+/* Screens that are 576px and smaller will not display the bakcground video*/
+@media screen and (max-width: 576px) {
+    #typingVideo {
+        display: none;
+    }    
+}
+
+/*Texts ovr the video*/
+.videoText {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    -webkit-animation: moveVideoText 5.75s;
+    animation: moveVideoText 5.75s;
+}
+
+/* Animation effect causes the overlay vido text to move up from the bottom of the page upon page load */
+@keyframes moveVideoText {
+    from {top: -100vw;}
+    to {top: 0vw;}
+}
+
+
+
