@@ -1,0 +1,72 @@
+/*Set font-family for whole document*/
+html {
+    font-family: Arial, sans-serif;
+}
+
+body {
+   background-image: url(../images/9738141-baseball-stadium.jpg);
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: 100% 100%;
+}
+
+main {
+    margin-right: 15%;
+    margin-left: 15%;
+    background-color: #fff;
+}
+
+/*Add a black background color to the top navigation*/
+.topnav {
+    background-color: #7b7485;
+    overflow: hidden;
+}
+
+/*Style the links inside the navigation bar*/
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/*Change the color of links on hover*/
+.topnav a:hover {
+    background-color: #ddd;
+    color: #000;
+}
+
+/*Add a color to the active/current link*/
+.topnav a.active {
+    background-color: #04aa6d;
+    color: #fff;
+}
+
+/* Styling the 'informational tiles' on the page */
+.infostyle {
+    border: solid 0px #000;
+    box-shadow: 4px 5px 10px #808080;
+    margin-bottom: 18px;
+}
+
+section p, section h2, section h3{
+    padding: 10px;
+}
+
+section p {
+    word-spacing: 2.5px;
+    line-height: 1.5;
+}
+
+section h2 {
+    text-decoration: underline;
+}
+
+section p img {
+        height: 200px;
+    margin-left: 15px;
+    float: right;
+}
+
