@@ -18,3 +18,9 @@ document.write(D);
 var Family = "The Arezzinis", Dad = "Jeremiah", Mom = "Hermoine", Daughter = "Penny", Son = "Zorro";
 document.write("</br>" + Family + " are a family of 5. " + Dad + " is the father, " + Mom + " is the mother, " + Daughter + " is the daughter, and " + Son + " is the son.");
 document.write("<br>" + (3 + 3));
+// Operator Assignment
+function operator() {
+    var sentence = "This is the operator";
+    sentence += " assignment projcet.";
+    document.getElementById("operatorAssignment").innerHTML = sentence;
+}
