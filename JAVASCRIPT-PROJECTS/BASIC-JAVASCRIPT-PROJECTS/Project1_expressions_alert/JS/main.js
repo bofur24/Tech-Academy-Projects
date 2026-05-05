@@ -24,3 +24,9 @@ function operator() {
     sentence += " assignment projcet.";
     document.getElementById("operatorAssignment").innerHTML = sentence;
 }
+// Function Challenge
+function changeParagraph() {
+    var paragraph = "This is the new paragraph that replace the old one.";
+    document.getElementById("newParagraph").innerHTML = paragraph;
+}
+
