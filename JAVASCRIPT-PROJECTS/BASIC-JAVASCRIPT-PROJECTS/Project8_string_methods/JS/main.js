@@ -38,3 +38,23 @@ function stringNumber() {
     document.getElementById("numOutput").innerHTML = result; // Output: "12345"
 }   
 
+// Precision() Method
+function precision_Method() {
+    var num = 123.456789;
+    var result = num.toPrecision(6);
+    document.getElementById("precisionOutput").innerHTML = result; // Output: "123.457"
+}
+
+// toFixed() Method
+function Fix_Method() {
+    var num = 123.456789;
+    var result = num.toFixed(2);
+    document.getElementById("fixOutput").innerHTML = result; // Output: "123.46"
+}
+
+// valueOf() Method
+function valueof_Method() {
+    var str = "Hello World!";
+    var result = str.valueOf();
+    document.getElementById("valueOfOutput").innerHTML = result; // Output: "Hello World!"
+}
