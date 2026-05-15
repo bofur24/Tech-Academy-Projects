@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Keith Heffington">
+    <title>Using the Console to Debug Code</title>
+</head>
+<!--<body onload="pageload()"> Uncaught ReferenceError: pageload is not defined - should be pageLoad() with a capital L-->
+<body onload="pageLoad()">
+    <!--Uncaught ReferenceError: counter is not defined - need counter to be in quotes in our function-->
+    <button onclick="clickCount()">Counter</button>
+    <button onclick="resetCount()">Reset</button>
+    <p id="counter"></p>
+   <script>
+        //Creates as greeting when the page first loads.
+        function pageLoad() {
+            var greeting = "Welcome to ";
+            greeting += "learning how to debug code ";
+            greeting += "using the console with dev tools!";
+            window.alert(greeting);
+        }
+
+        // Sets default count to 0
+        var count = 0;
+        // Counts the number of clicks
+        function clickCount() {
+            count ++;
+            // document.getElementById(counter).innerHTML = count; Uncaught ReferenceError: counter is not defined - need counter to be in quotes in our function
+            document.getElementById("counter").innerHTML = count;
+        }
+        // Resets number of clicks
+        function resetCount() {
+            var count ="";
+            // document.getElementById(counter).innerHTML = count; Uncaught ReferenceError: counter is not defined - need counter to be in quotes in our function
+            document.getElementById("counter").innerHTML = count;
+        }
+
+        A = "Always ";
+        B = "remember: ";
+        document.write(A + B);
+
+        X = "you ";
+        Y = "are ";
+        document.write(X + Y);
+
+        M = "unique, ";
+        N = "just like everyone else.";
+        // document.write(M + Z); Uncaught ReferenceError: Z is not defined - should be N instead of Z
+        document.write(M + N);
+   </script> 
+</body>
+</html>
