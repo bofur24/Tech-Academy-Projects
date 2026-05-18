@@ -36,3 +36,31 @@ function array_Function() {
     Gundam_Pilots[3] = "Judau Ashta";
     document.getElementById("Array").innerHTML = "One of the most famous Gundam pilots is: " + Gundam_Pilots[1];
 }
+
+// Constant
+function constant_Function() {
+    const Musical_Instrument = {type:"Gutar", brand:"Fender", color:"Red"};
+    Musical_Instrument.color = "Blue";
+    Musical_Instrument.price = "$900";
+    document.getElementById("Constant").innerHTML = "The cost of the " + Musical_Instrument.type + " was " + Musical_Instrument.price;
+}
+
+
+// Let and var scope
+var X = 82;
+document.write(X);
+{
+    let X = 33;
+    document.write("<br>" + X);
+}
+document.write("<br>" + X);
+
+// Return statement
+document.getElementById("Return").innerHTML = myFunction("John");
+
+function myFunction(name) {
+    return "Hello " + name;
+}
+
+
+
