@@ -62,5 +62,33 @@ function myFunction(name) {
     return "Hello " + name;
 }
 
+// Object
+let car = {
+    make: "Toyota",
+    model: "Corolla",
+    year: 2020,
+    description: function() {
+        return "The car is a " + this.year + " " + this.make + " " + this.model;        
+    }
+}
+document.getElementById("Car_Object").innerHTML = car.description();
 
+// Break statement
+function break_loop() {
+    for (var i = 0; i < 10; i++) {
+        if (i === 5) {
+            break;
+        }
+        document.getElementById("Break_Result").innerHTML += "The number is " + i + "<br>";
+    }
+}
 
+// Continue statement
+function continue_loop() {
+    for (var i = 0; i < 10; i++) {
+        if (i == 5) {
+            continue;
+        }
+        document.getElementById("Continue_Result").innerHTML += "The number is " + i + "<br>";
+    }
+}
