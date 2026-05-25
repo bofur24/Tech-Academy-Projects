@@ -34,3 +34,22 @@ function Hello_World_Function() {
     var A = document.getElementsByClassName("Click");
     A[0].innerHTML = "The text has changed!";
 }
+
+// Canvas draw a circle
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+ctx.fillStyle = "red";
+ctx.fillRect(100,50,300,150);
+
+var c = document.getElementById("myCanvas");
+var cx = c.getContext("2d");
+cx.beginPath();
+cx.arc(250,150,100,0,3*Math.PI);
+cx.stroke();
+
+const my_gradient = ctx.createLinearGradient(0, 0, 0, 170);
+my_gradient.addColorStop(0, "white");
+my_gradient.addColorStop(1, "black");
+// Fill with gradient
+ctx.fillStyle = my_gradient;
+ctx.fillRect(0, 0, 100, 250);
