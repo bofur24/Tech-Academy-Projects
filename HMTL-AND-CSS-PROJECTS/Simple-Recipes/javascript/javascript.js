@@ -28,3 +28,63 @@ for (var i = 0; i < closeBtn.length; i++) {
         }
     }
 }
+
+// Close the modal after 10 seconds
+const myTimeout = setTimeout(closeModal, 10000);
+
+function closeModal() {
+    for (var index in modals) {
+        if (modals[index].style) {
+            modals[index].style.display = "none";
+        }
+    }
+}
+
+
+//EMAIL VALIDATION
+document.getElementById("contactForm").addEventListener('submit',
+    function (event) {
+        //Overrides the default broswer refresh when the submit
+        //button is pressed
+        event.preventDefault();
+
+        // Variables to validate that each field is filled out
+        const firstName = document.getElementById("firstName").value;
+        const lastName = document.getElementById("lastName").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const message = document.getElementById("message").value;
+
+        //Email pattern checks for all symbols that would be needed
+        //for an email address such as the @ and . and the text
+        //that would come before, between, and after.
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+        //Use this variable to display message if fields are filled
+        //out or thank you message.
+        const valMsg = document.getElementById('validateMsg');
+
+        if (!firstName || !lastName || !phone || !message) {
+            //Check if fields have been filled out
+            valMsg.innerHTML = '<p style="color: red;">Please fill out all empty fields.</p>';
+        }else if (!emailPattern.test(email)) {
+            // Checks if there is a vaild email
+            valMsg.innerHTML = '<p style="color: red;">Please enter a vaid email</p>'; 
+        }else {
+            // If all fields are filled out correctly display thank you message
+            valMsg.innerHTML = '<p style="color: red;">Thank you for submitting!</p>';
+        }
+
+        const formData = {
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            phone: phone,
+            message: message,
+            subscribe: document.getElementById("subscription").checked    
+        };
+
+        //Displays what the user wrote in the console
+        console.log(JSON.stringify(formData));
+}
+);
