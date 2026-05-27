@@ -1,0 +1,70 @@
+
+body {
+    background-color:#5aa0cf
+}
+
+h1 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #0c5502;
+}
+
+h3 {
+    font-family:'Courier New', Courier, monospace;
+    color: #30441f;
+}
+
+div {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #206141;
+}
+
+
+#menuBG {
+    width: 800px;
+    height: 470px;
+    margin: 10px auto;
+}
+
+#frmMenu {
+    width: 800px;
+    height: 200px;
+}
+
+.column {
+    width: 33.33%;
+    height: 200px;
+    float: left;
+}
+
+#showText {
+    width: 50%;
+    height: 190px;
+    margin: 0px auto;
+    float: left;
+}
+
+#totalPrice {
+    width: 50%;
+    height: 190px;
+    margin: 0 auto;
+    float: left;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+
+}
+
+#cart {
+    top: 0;
+    margin: 0px auto;
+    height: 200px;
+}
+
+#btnOrder {
+    margin: 10px 0px 0px 250px;
+    width: 100px;
+    height: 40px;
+}
