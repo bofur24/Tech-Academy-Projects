@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Keith Heffington">
+    <script src="react.js"></script>
+    <script src="react-dom.js"></script>
+    <title>React Project 1</title>
+</head>
+<body>
+    <p>React code creates a timer that counts upward</p>
+    <div id="My_React_Code">
+        <script>
+            var Counter = React.createClass({ //React.createClass - creates component classes
+                render: function() {
+                    var time_Passed = Math.round(this.props.time_Passed / 100);
+                    // Vanilla JavaScript ? - a conditional operator that checks for whether or not a condition is true, the : following it is shorthand for "else"
+                    // Vanilla JavaScript % finds the remainder
+                    var seconds_Passed = time_Passed / 10 + (time_Passed % 10 ? '' : '.0'); 
+                    var text = 'My React code started running ' +
+                        seconds_Passed + ' seconds ago!';
+                    return React.DOM.p(null, text); // ReactDOM.render() - used to render a React Component or Components
+                }
+            });
+
+            var counter_Factory = React.createFactory(Counter); // React.createFactory - a function that generates a factory (object that can create other objects)
+
+            var start_Counting = new Date().getTime();
+            setInterval(function() { // Vanilla JavaScript setInterval() - a method that evaluates an expression at specified intervals (milliseconds)
+                ReactDOM.render (
+                    counter_Factory({time_Passed: new Date().getTime() - start_Counting}),
+                    document.getElementById('My_React_Code')
+                );
+            }, 50);
+        </script>
+    </div>
+</body>
+</html>
