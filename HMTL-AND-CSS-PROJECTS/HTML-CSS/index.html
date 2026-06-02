@@ -10,6 +10,10 @@
 </head>
 
 <body>
+    <script>
+        // Fade in effect to the body
+        document.body.classList.add('fade-out');
+    </script>
     <main>
         <!--NavBar-->
         <nav class="topnav">
@@ -20,6 +24,24 @@
             <a href="#film">Film and Television</a>
             <a href="#videos">Videos</a>
         </nav>
+        <div class="square"></div>
+        <!-- POPUP FORM -->
+         <button class="open-button" onclick="openForm()">Open Form</button>
+
+         <div class="form-popup" id="myForm">
+            <form action="#" class="form-container">
+                <h1>Login</h1>
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit" class="btn">Login</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+
+         </div>
         <!--Early Life-->
         <section class="infostyle">
             <h2 id="early-life">Early Life</h2>
@@ -329,7 +351,17 @@
             <h4>Most insane catches</h4>
             <iframe src="https://www.youtube.com/watch?v=jXZTw-GtQcY"></iframe>
         </section>
+        <!-- FORM -->
+         <section class="infostyle">
+            <h2>Telephone Number</h2>
+            <form name="telephoneForm" onsubmit="return validateForm()">
+                <label for="Telephone">Telephone Number</label><br>
+                <input type="tel" id="Telephone" name="Telephone"><br>
+                <input type="submit" value="Submit">
+            </form>
+         </section>
     </main>
+    <script src="JS/javascript.js"></script>
 </body>
 
 </html>
