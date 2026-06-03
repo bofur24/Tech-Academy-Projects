@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Author" content="Keith Heffington">
     <link rel="stylesheet" href="css/styles.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <title>Ken Griffery Jr. Dedication</title>
 </head>
 
@@ -26,9 +27,9 @@
         </nav>
         <div class="square"></div>
         <!-- POPUP FORM -->
-         <button class="open-button" onclick="openForm()">Open Form</button>
+        <button class="open-button" onclick="openForm()">Open Form</button>
 
-         <div class="form-popup" id="myForm">
+        <div class="form-popup" id="myForm">
             <form action="#" class="form-container">
                 <h1>Login</h1>
                 <label for="email"><b>Email</b></label>
@@ -41,7 +42,7 @@
                 <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
             </form>
 
-         </div>
+        </div>
         <!--Early Life-->
         <section class="infostyle">
             <h2 id="early-life">Early Life</h2>
@@ -291,6 +292,25 @@
             <p>On July 29, 2021, Griffey was elected to the Baseball Hall of Fame's Board of Directors.</p>
             <p>As of 2021, Griffey is also working as a senior adviser to MLB Commissioner Rob Manfred.</p>
         </section>
+        <!-- IMAGE ZOOM -->
+        <section class="infostyle">
+            <img class="ken-swing zoom" src="images/kenGriffeyJrSwing.webp" alt="">
+        </section>
+        <!-- slideshow -->
+        <section class="infostyle">
+            <h2>Teams Ken Griffey Jr. played for</h2>
+            <div id="slideshow">
+                <div>
+                    <img class="logo" src="images/seattle-mariners-logo-transparent.png" alt="Seattle Mariners">
+                </div>
+                <div>
+                    <img class="logo" src="images/Cincinnati-Reds-Logo-Transparent-File.png" alt="Cincinnati Reds">
+                </div>
+                <div>
+                    <img class="logo" src="images/white-sox-log.png" alt="White Sox">
+                </div>
+            </div>
+        </section>
         <!--Film-->
         <section class="infostyle">
             <h3 id="film">Film and Television</h3>
@@ -352,16 +372,17 @@
             <iframe src="https://www.youtube.com/watch?v=jXZTw-GtQcY"></iframe>
         </section>
         <!-- FORM -->
-         <section class="infostyle">
+        <section class="infostyle">
             <h2>Telephone Number</h2>
             <form name="telephoneForm" onsubmit="return validateForm()">
                 <label for="Telephone">Telephone Number</label><br>
                 <input type="tel" id="Telephone" name="Telephone"><br>
                 <input type="submit" value="Submit">
             </form>
-         </section>
+        </section>
     </main>
     <script src="JS/javascript.js"></script>
+   
 </body>
 
 </html>
