@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Author" content="Keith Heffington">
+    <link rel="shortcut icon" type="img/jpg" href="images/coding_icon.png">
     <link rel="stylesheet" href="css/styles.css">
     <title>Keith Heffington Portfolio</title>
 </head>
@@ -14,11 +15,12 @@
     <!--Navbar-->
     <nav class="navBar">
         <a class="active" href="#home">Home</a>
+        <a href="#Slideshow">Slideshow</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#github">Github</a>
         <a href="#projects">My Projects</a>
-        <a href="#contact">Contact</a>
+        <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
     </nav>
     <!--Breaks inserted to add space between navbar and the first heading-->
     <br>
@@ -51,6 +53,61 @@
                 <br> Thank you for stopping by and enjoy!
             </p>
         </strong>
+    </section>
+
+    <!-- Slideshow section -->
+    <section id="Slideshow">
+        <div id="Slideshow_Background">
+            <div id="Slideshow_Container">
+                <!-- Slide 1 of 6 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/DSC_0864 5X7.JPG" alt="My Image">
+                    <div class="text">I'm available to assist you on your project!</div>
+                </div>
+                <!-- Slide 2 of 6 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/HTML_CSS_and_JavaScript.jpeg"
+                        alt="HTML, CSS, and JS Logos">
+                    <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript
+                    </div>
+                </div>
+                <!-- Slide 3 of 6 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/Python.png" alt="Python Logo">
+                    <div class="text">the popular programming language Python,</div>
+                </div>
+                <!-- Slide 4 of 6 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/C_Sharp_and_Dot_NET.png" alt="C# Logo">
+                    <div class="text">C#, .NET Framework, ASP.NET, MVC,</div>
+                </div>
+                <!-- Slide 5 of 6 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/SQL_and_Database.jpg" alt="SQL Logo">
+                    <div class="text">back end development, databases and SQL.</div>
+                </div>
+                <!-- Slide 6 of 6 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/Coding_1.jpg" alt="My Image">
+                    <div class="text"><a class="white-text contact" onclick="openForm()">Contact Me Now!</a></div>
+                </div>
+                <!-- Previous and next buttons -->
+                <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br> <!-- Adds a space between the sldeshow imges and the dots-->
+
+            <!-- Slideshow dots (these are another way for users to navigate the slideshow) -->
+            <div style="text-align: center;">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+        </div>
+
     </section>
 
     <!--About section-->
@@ -96,13 +153,13 @@
                 <ul>
                     <li>Bootstrap (Intermediate)</li>
                     <li>W3.CSS (Intermediate)</li>
-                    <li>WordPress (Intermediate)</li>                    
+                    <li>WordPress (Intermediate)</li>
                 </ul>
                 <li class="liHead">Programming Skills</li>
-                    <ul>
-                        <li>C# (Basic)</li>
-                        <li>Java (Basic)</li>
-                    </ul>
+                <ul>
+                    <li>C# (Basic)</li>
+                    <li>Java (Basic)</li>
+                </ul>
                 <li>Git/Github (Basic)</li>
             </ul>
         </div>
@@ -122,7 +179,7 @@
             <p class="center">
                 You can view my coding projects on my GitHub profile here:
                 <br>
-                <p class="center"><a href="https://github.com/bofur24" target="_blank">My Github Site</a></p>
+            <p class="center"><a href="https://github.com/bofur24" target="_blank">My Github Site</a></p>
             </p>
         </div>
     </section>
@@ -134,39 +191,50 @@
         </div>
         <div class="column3">
             <h3>Blue Rock Thearpy & Wellness Clinc</h3>
-            <a href="https://bluerockpt.com/"><img src="images/BlueRockPT.png" alt="Blue Rock PT Project"></a>
+            <a href="https://bluerockpt.com/" target="_blank"><img src="images/BlueRockPT.png" alt="Blue Rock PT Project"></a>
         </div>
         <div class="column3">
             <h3>Bridges Realty Group LLC</h3>
-            <a href="https://bridgesrealtygroup.com/"><img src="images/Bridges_Realty_Group_Image.png" alt="Bridges Realty Group Project"></a>
+            <a href="https://bridgesrealtygroup.com/" target="_blank"><img src="images/Bridges_Realty_Group_Image.png"
+                    alt="Bridges Realty Group Project"></a>
         </div>
         <div class="column3">
             <h3>Floraceuticals LLC</h3>
-            <a href="https://floraceuticalsok.com/"><img src="images/FloraceuticalsLLC.png" alt="Floraceuticalsok Project"></a>
+            <a href="https://floraceuticalsok.com/" target="_blank"><img src="images/FloraceuticalsLLC.png"
+                    alt="Floraceuticalsok Project"></a>
         </div>
     </section>
 
     <!--Contact-->
-    <section id="contact">
-        <h1>Contact</h1>
-        <!--This specifies where and how to send the form data; we are leaving it blank-->
-        <form action="https://formspree.io/f/xlgapelq" method="POST"> <!--Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute-->
-            <label>Name:</label>
-                <input type="text" placeholder="Please enter your name here">
-            <label>Email:</label>
-                <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-            <label>Message:</label>
-                <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                <input type="submit" value="SUBMIT">
-        </form>
+    <section id="Contact">
+        <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+        <div class="form-popup" id="myForm">
+            <!--This specifies where and how to send the form data; we are leaving it blank-->
+            <form action="https://formspree.io/f/xlgapelq" method="POST" class="form-container">
+                <!--Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute-->
+                <h1>Contact</h1>
+                <label for="name">Name:</label>
+                <input type="text" placeholder="Please enter your name here" name="name" required>
+                <label for="phone">Phone</label>
+                <input type="text" placeholder="Type your phone number here" name="phone">
+                <label for="email">Email:</label>
+                <input type="text" name="Email" placeholder="Please enter your email here" required>
+                <label for="message">Message:</label>
+                <input type="text" name="Message" placeholder="Please write your message here">
+
+                <button type="submit" class="btn">SUBMIT</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+            </form>
+        </div>
     </section>
 
     <!--Footer-->
     <footer>
         <p>
-            <p class="center">&copy 2026 Keith Heffington</p>
+        <p class="center">&copy 2026 Keith Heffington</p>
         </p>
     </footer>
+    <script src="JS/main.js"></script>
 </body>
 
 </html>
